@@ -15,15 +15,15 @@
     "type": "git",
     "url": "https://github.com/johnotander/do-not-disturb.git"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/johnotander/do-not-disturb/issues"
   },
   "homepage": "https://github.com/johnotander/do-not-disturb",
-  "dependencies": {},
+  "dependencies": {
+    "run-applescript": "^1.0.1"
+  },
   "devDependencies": {
     "mocha": "*"
   }

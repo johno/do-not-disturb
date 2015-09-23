@@ -2,18 +2,31 @@
 
 Toggle do not disturb mode for OS X
 
-## Installation
+## CLI
 
 ```bash
-npm install --save do-not-disturb
+$ npm i -g do-not-disturb
 ```
 
-## Usage
+```bash
+$ do-not-disturb --help
+
+  Usage
+    do-not-disturb
+```
+
+## API
+
+```bash
+$ npm install --save do-not-disturb
+```
 
 ```javascript
-var doNotDisturb = require('do-not-disturb');
+var doNotDisturb = require('do-not-disturb')
 
-doNotDisturb();  // => true
+doNotDisturb(function () {
+  console.log('Do not disturb has been toggled')
+})
 ```
 
 ## License
