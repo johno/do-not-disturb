@@ -4,9 +4,15 @@
   "author": "John Otander",
   "version": "0.0.1",
   "main": "index.js",
+  "bin": "cli.js",
+  "preferGlobal": true,
   "directories": {
     "test": "test"
   },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
   "scripts": {
     "test": "mocha test",
     "jshint": "jshint ."
@@ -15,13 +21,18 @@
     "type": "git",
     "url": "https://github.com/johnotander/do-not-disturb.git"
   },
-  "keywords": [],
+  "keywords": [
+    'osx',
+    'disturb',
+    'notification'
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/johnotander/do-not-disturb/issues"
   },
   "homepage": "https://github.com/johnotander/do-not-disturb",
   "dependencies": {
+    "meow": "^3.3.0",
     "run-applescript": "^1.0.1"
   },
   "devDependencies": {
