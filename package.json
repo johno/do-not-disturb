@@ -22,9 +22,9 @@
     "url": "https://github.com/johnotander/do-not-disturb.git"
   },
   "keywords": [
-    'osx',
-    'disturb',
-    'notification'
+    "osx",
+    "disturb",
+    "notification"
   ],
   "license": "MIT",
   "bugs": {
