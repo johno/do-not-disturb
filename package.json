@@ -1,0 +1,30 @@
+{
+  "name": "do-not-disturb",
+  "description": "Toggle do not disturb mode for OS X",
+  "author": "John Otander",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "jshint": "jshint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/do-not-disturb.git"
+  },
+  "keywords": [
+
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/do-not-disturb/issues"
+  },
+  "homepage": "https://github.com/johnotander/do-not-disturb",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
