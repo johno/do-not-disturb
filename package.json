@@ -14,8 +14,7 @@
     "cli.js"
   ],
   "scripts": {
-    "test": "mocha test",
-    "jshint": "jshint ."
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -36,6 +35,6 @@
     "run-applescript": "^1.0.1"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "*"
   }
 }
