@@ -2,7 +2,7 @@
   "name": "do-not-disturb",
   "description": "Toggle do not disturb mode for OS X",
   "author": "John Otander",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "bin": "cli.js",
   "preferGlobal": true,
