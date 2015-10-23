@@ -15,6 +15,10 @@ $ do-not-disturb --help
     do-not-disturb
 ```
 
+Note: If you haven't already, you will need to give your Terminal.app the ability to control your computer. In `System Preferences > Security & Privacy`:
+
+![h4ixljc8p5u7wpaidv7ynwrbvlifzonor7gxg-fdn7e](https://cloud.githubusercontent.com/assets/1424573/10701986/06c323a6-7984-11e5-9fa1-3fb239c7a60f.png)
+
 ## API
 
 ```bash
