@@ -1,19 +1,44 @@
-'use strict'
-var runApplescript = require('run-applescript')
+'use strict';
+const runApplescript = require('run-applescript');
 
-module.exports = function doNotDisturb(cb) {
-  cb = cb || function () {}
-
+module.exports.on = function () {
   if (process.platform !== 'darwin') {
-    throw new Error('do-not-disturb only supports the darwin platform')
+    throw new Error('do-not-disturb only supports the darwin platform');
   }
 
-  runApplescript(
-    'tell application "System Events" to tell process "SystemUIServer"\n' +
-      '\tkey down option\n' +
-      '\tclick menu bar item 1 of menu bar 2\n' +
-      '\tkey up option\n' +
-    'end tell',
-    cb
-  )
-}
+  return runApplescript(`
+    tell application "System Events"
+      tell application process "SystemUIServer"
+        try
+					if not (exists menu bar item "Notification Center, Do Not Disturb enabled" of menu bar 2 of application process "SystemUIServer" of application "System Events") then
+            key down option
+            click menu bar item "Notification Center" of menu bar 2
+            key up option
+          end if
+        on error
+          key up option
+        end try
+      end tell
+    end tell`);
+};
+
+module.exports.off = function () {
+  if (process.platform !== 'darwin') {
+    throw new Error('do-not-disturb only supports the darwin platform');
+  }
+
+  return runApplescript(`
+    tell application "System Events"
+      tell application process "SystemUIServer"
+        try
+          if exists menu bar item "Notification Center, Do Not Disturb enabled" of menu bar 2 of application process "SystemUIServer" of application "System Events" then
+            key down option
+            click menu bar item "Notification Center, Do Not Disturb enabled" of menu bar 2
+            key up option
+          end if
+        on error
+          key up option
+        end try
+      end tell
+    end tell`);
+};

@@ -1,14 +1,11 @@
 #!/usr/bin/env node
-'use strict'
+'use strict';
+const meow = require('meow');
+const doNotDisturb = require('./');
 
-var meow = require('meow')
-var doNotDisturb = require('./')
+meow(`
+	Usage
+	  $ do-not-disturb
+`);
 
-var cli = meow({
-  help: [
-    'Usage',
-    '  empty-trash'
-  ]
-})
-
-doNotDisturb()
+doNotDisturb.on();
