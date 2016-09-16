@@ -32,8 +32,7 @@
   ],
   "dependencies": {
     "meow": "^3.6.0",
-    "run-applescript": "^3.0.0",
-    "update-notifier": "^1.0.2"
+    "run-applescript": "^3.0.0"
   },
   "devDependencies": {
     "ava": "*",
