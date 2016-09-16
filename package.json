@@ -1,40 +1,46 @@
 {
   "name": "do-not-disturb",
-  "description": "Toggle do not disturb mode for OS X",
-  "author": "John Otander",
   "version": "0.1.0",
-  "main": "index.js",
-  "bin": "cli.js",
-  "preferGlobal": true,
-  "directories": {
-    "test": "test"
+  "description": "Toggle do not disturb mode for macOS",
+  "license": "MIT",
+  "repository": "johnotander/do-not-disturb",
+  "author": {
+    "name": "John Otander",
+    "email": "johnotander@gmail.com",
+    "website": "http://johnotander.com"
+  },
+  "bin": {
+    "do-not-disturb": "cli.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "cli.js",
+    "index.js"
   ],
-  "scripts": {
-    "test": "ava"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/do-not-disturb.git"
-  },
   "keywords": [
-    "osx",
+    "cli",
     "disturb",
+    "do",
+    "macos",
+    "not",
     "notification"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/do-not-disturb/issues"
-  },
-  "homepage": "https://github.com/johnotander/do-not-disturb",
   "dependencies": {
-    "meow": "^3.3.0",
-    "run-applescript": "^1.0.1"
+    "meow": "^3.6.0",
+    "run-applescript": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "*"
+    "ava": "*",
+    "execa": "^0.4.0",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true
   }
 }

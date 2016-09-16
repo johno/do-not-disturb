@@ -1,14 +1,12 @@
-import test from 'ava'
-import doNotDisturb from './'
+import test from 'ava';
+import m from './';
 
-test('turns on do-not-disturb when appropriate', t => {
-  t.plan(1)
-
-  if (process.platform === 'darwin') {
-    doNotDisturb(function () {
-      t.ok(true)
-    })
-  } else {
-    t.throws(doNotDisturb)
+test(t => {
+  if (process.env.CI) {
+    t.pass();
+    return;
   }
-})
+
+  t.notThrows(m.on(new Error('test')));
+  t.notThrows(m.off(new Error('test')));
+});
