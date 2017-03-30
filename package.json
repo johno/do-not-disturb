@@ -1,6 +1,6 @@
 {
   "name": "do-not-disturb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Toggle do not disturb mode for macOS",
   "license": "MIT",
   "repository": "johnotander/do-not-disturb",
