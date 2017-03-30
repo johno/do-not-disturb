@@ -1,15 +1,14 @@
 'use strict';
-const runApplescript = require('run-applescript');
 const os = require('os');
+const runApplescript = require('run-applescript');
 
 function getMenuBarId() {
-  const release = os.release().split(".");
+  const release = os.release().split('.');
   const osSierraVersion = 16;
-  if (release.length > 0 && parseInt(release[0]) >= osSierraVersion) {
+  if (release.length > 0 && parseInt(release[0], 10) >= osSierraVersion) {
     return 1;
-  } else {
-    return 2;
   }
+  return 2;
 }
 
 module.exports.on = function () {
