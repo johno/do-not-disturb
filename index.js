@@ -21,7 +21,7 @@ module.exports.on = function () {
     tell application "System Events"
       tell application process "SystemUIServer"
         try
-					if not (exists menu bar item "Notification Center, Do Not Disturb enabled" of menu bar ${menuBarId} of application process "SystemUIServer" of application "System Events") then
+          if not (exists menu bar item "Notification Center, Do Not Disturb enabled" of menu bar ${menuBarId} of application process "SystemUIServer" of application "System Events") then
             key down option
             click menu bar item "Notification Center" of menu bar ${menuBarId}
             key up option
