@@ -11,10 +11,31 @@ function getMenuBarId() {
   return 2;
 }
 
+module.exports.status = function () {
+  if (os.platform() !== 'darwin') {
+    throw new Error('do-not-disturb only supports the darwin platform');
+  }
+
+  const menuBarId = getMenuBarId();
+
+  return runApplescript(`
+    tell application "System Events"
+      tell application process "SystemUIServer"
+        try
+          return exists menu bar item "Notification Center, Do Not Disturb enabled" of menu bar ${menuBarId} of application process "SystemUIServer" of application "System Events"
+        on error
+          return false
+        end try
+      end tell
+    end tell
+  `);
+};
+
 module.exports.on = function () {
   if (os.platform() !== 'darwin') {
     throw new Error('do-not-disturb only supports the darwin platform');
   }
+
   const menuBarId = getMenuBarId();
 
   return runApplescript(`
@@ -37,6 +58,7 @@ module.exports.off = function () {
   if (os.platform() !== 'darwin') {
     throw new Error('do-not-disturb only supports the darwin platform');
   }
+
   const menuBarId = getMenuBarId();
 
   return runApplescript(`

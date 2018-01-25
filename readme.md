@@ -26,11 +26,15 @@ $ npm install --save do-not-disturb
 ```
 
 ```javascript
-var doNotDisturb = require('do-not-disturb')
+const doNotDisturb = require('do-not-disturb');
 
-doNotDisturb(function () {
-  console.log('Do not disturb has been toggled')
-})
+doNotDisturb.on();
+doNotDisturb.off();
+
+// Or check the state of do not disturb mode
+doNotDisturb
+  .status()
+  .then(console.log);
 ```
 
 ## License
