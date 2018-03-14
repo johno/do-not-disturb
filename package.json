@@ -35,7 +35,7 @@
     "run-applescript": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "*",
+    "ava": "0.17.0",
     "execa": "^0.4.0",
     "xo": "*"
   },
