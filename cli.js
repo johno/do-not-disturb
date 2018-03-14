@@ -14,12 +14,12 @@ const cli = meow(`
     off
 `);
 
-const command = cli.input[0]
+const command = cli.input[0];
 switch (command) {
   case 'off':
-    doNotDisturb.off()
+    doNotDisturb.off();
     break;
   case 'on':
   default:
-    doNotDisturb.on()
+    doNotDisturb.on();
 }
