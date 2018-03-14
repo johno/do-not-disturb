@@ -3,7 +3,7 @@
 'use strict';
 
 const meow = require('meow');
-const doNotDisturb = require('./');
+const doNotDisturb = require('.');
 
 const cli = meow(`
 	Usage
