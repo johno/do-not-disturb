@@ -1,4 +1,4 @@
-# do-not-disturb [![Build Status](https://secure.travis-ci.org/johnotander/do-not-disturb.png?branch=master)](https://travis-ci.org/johnotander/do-not-disturb)
+# do-not-disturb [![Build Status](https://secure.travis-ci.org/johno/do-not-disturb.png?branch=master)](https://travis-ci.org/johno/do-not-disturb)
 
 Toggle do not disturb mode for OS X
 

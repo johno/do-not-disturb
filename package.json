@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Toggle do not disturb mode for macOS",
   "license": "MIT",
-  "repository": "johnotander/do-not-disturb",
+  "repository": "johno/do-not-disturb",
   "author": {
     "name": "John Otander",
     "email": "johnotander@gmail.com",
