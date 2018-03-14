@@ -5,9 +5,21 @@
 const meow = require('meow');
 const doNotDisturb = require('./');
 
-meow(`
+const cli = meow(`
 	Usage
-	  $ do-not-disturb
+	  $ do-not-disturb [command]
+
+  Commands
+    on
+    off
 `);
 
-doNotDisturb.on();
+const command = cli.input[0]
+switch (command) {
+  case 'off':
+    doNotDisturb.off()
+    break;
+  case 'on':
+  default:
+    doNotDisturb.on()
+}
